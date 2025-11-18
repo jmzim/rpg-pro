@@ -19,6 +19,32 @@
         <button id="options-btn" class="menu-btn">OPÇÕES</button>
     </div>
 
+    <!-- TELA DE SELEÇÃO DE PERSONAGEM -->
+    <div id="character-select" class="menu hidden">
+        <h1>Selecione seu Personagem</h1>
+
+        <div id="char-container">
+
+            <div class="char-option" data-char="1">
+                <img src="chars/char1.png" class="char-img">
+                <p>Player 1 — Menino Azul</p>
+            </div>
+
+            <div class="char-option" data-char="2">
+                <img src="chars/char2.png" class="char-img">
+                <p>Player 2 — Menina Loira</p>
+            </div>
+
+            <div class="char-option" data-char="3">
+                <img src="chars/char3.png" class="char-img">
+                <p>Player 3 — Rapaz da Jaqueta</p>
+            </div>
+
+        </div>
+
+        <button id="confirm-char" class="menu-btn disabled">Confirmar</button>
+    </div>
+
     <!-- HUD DO JOGO -->
     <div id="hud" class="hidden">
         <div class="bar">
@@ -30,7 +56,14 @@
         <div id="xp-box">XP: 0</div>
     </div>
 
-    <!-- CANVAS DO JOGO (CORRETO) -->
+    <!-- BOTÕES DE CONTROLE -->
+    <div id="ui-buttons" class="hidden">
+        <button onclick="openInventory()" class="ui-btn">🎒</button>
+        <button onclick="openQuests()" class="ui-btn">📜</button>
+        <button onclick="openStatus()" class="ui-btn">⚔️</button>
+    </div>
+
+    <!-- CANVAS DO GAME -->
     <canvas id="game" width="960" height="540"></canvas>
 
     <!-- INVENTÁRIO -->
@@ -66,28 +99,22 @@
         <button id="cutscene-next">Continuar</button>
     </div>
 
-    <!-- JANELA DE MISSÕES -->
+    <!-- MISSÕES -->
     <div id="quest-panel" class="panel hidden">
         <h2>Missões</h2>
         <div id="quest-list"></div>
         <button class="close-btn" onclick="closeQuests()">Fechar</button>
     </div>
 
-    <!-- JANELA DE STATUS -->
+    <!-- STATUS DO JOGADOR -->
     <div id="status-panel" class="panel hidden">
         <h2>Status do Jogador</h2>
         <p id="status-info"></p>
         <button class="close-btn" onclick="closeStatus()">Fechar</button>
     </div>
 
-    <!-- BOTÕES DE CONTROLE -->
-    <div id="ui-buttons" class="hidden">
-        <button onclick="openInventory()" class="ui-btn">🎒</button>
-        <button onclick="openQuests()" class="ui-btn">📜</button>
-        <button onclick="openStatus()" class="ui-btn">⚔️</button>
-    </div>
-
     <!-- IMPORTAÇÃO DO JS -->
     <script src="game.js"></script>
+
 </body>
 </html>
