@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RPG-PRO</title>
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- MENU INICIAL -->
+    <div id="main-menu" class="menu">
+        <h1>RPG-PRO</h1>
+        <button id="play-btn" class="menu-btn">JOGAR</button>
+        <button id="load-btn" class="menu-btn">CONTINUAR</button>
+        <button id="options-btn" class="menu-btn">OPÇÕES</button>
+    </div>
+
+    <!-- HUD DO JOGO -->
+    <div id="hud" class="hidden">
+        <div class="bar">
+            <div id="hp-bar" class="fill hp"></div>
+        </div>
+        <div class="bar">
+            <div id="mp-bar" class="fill mp"></div>
+        </div>
+        <div id="xp-box">XP: 0</div>
+    </div>
+
+    <!-- CANVAS DO JOGO (CORRETO) -->
+    <canvas id="game" width="960" height="540"></canvas>
+
+    <!-- INVENTÁRIO -->
+    <div id="inventory" class="panel hidden">
+        <h2>Inventário</h2>
+        <div id="inventory-grid"></div>
+        <button class="close-btn" onclick="closeInventory()">Fechar</button>
+    </div>
+
+    <!-- JANELA DE DIÁLOGO -->
+    <div id="dialog-box" class="dialog hidden">
+        <p id="dialog-text"></p>
+        <button id="dialog-next">Continuar</button>
+    </div>
+
+    <!-- LOJA -->
+    <div id="shop" class="panel hidden">
+        <h2>Loja</h2>
+        <div id="shop-items"></div>
+        <button class="close-btn" onclick="closeShop()">Fechar</button>
+    </div>
+
+    <!-- MENU DE PAUSE -->
+    <div id="pause-menu" class="menu hidden">
+        <h1>Pausado</h1>
+        <button id="resume-btn" class="menu-btn">Continuar</button>
+        <button id="quit-btn" class="menu-btn">Sair</button>
+    </div>
+
+    <!-- CUTSCENE -->
+    <div id="cutscene" class="cutscene hidden">
+        <div id="cutscene-text"></div>
+        <button id="cutscene-next">Continuar</button>
+    </div>
+
+    <!-- JANELA DE MISSÕES -->
+    <div id="quest-panel" class="panel hidden">
+        <h2>Missões</h2>
+        <div id="quest-list"></div>
+        <button class="close-btn" onclick="closeQuests()">Fechar</button>
+    </div>
+
+    <!-- JANELA DE STATUS -->
+    <div id="status-panel" class="panel hidden">
+        <h2>Status do Jogador</h2>
+        <p id="status-info"></p>
+        <button class="close-btn" onclick="closeStatus()">Fechar</button>
+    </div>
+
+    <!-- BOTÕES DE CONTROLE -->
+    <div id="ui-buttons" class="hidden">
+        <button onclick="openInventory()" class="ui-btn">🎒</button>
+        <button onclick="openQuests()" class="ui-btn">📜</button>
+        <button onclick="openStatus()" class="ui-btn">⚔️</button>
+    </div>
+
+    <!-- IMPORTAÇÃO DO JS -->
+    <script src="game.js"></script>
+</body>
+</html>
