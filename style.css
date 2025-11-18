@@ -1,0 +1,213 @@
+/* ================================
+      ESTILO GERAL
+================================ */
+body {
+    margin: 0;
+    padding: 0;
+    background: #1a1a1a;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ================================
+      MENU PRINCIPAL
+================================ */
+.menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.menu h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.menu-btn {
+    display: block;
+    width: 250px;
+    padding: 15px;
+    margin: 10px auto;
+    font-size: 22px;
+    border: none;
+    border-radius: 8px;
+    background: #444;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.menu-btn:hover {
+    background: #666;
+}
+
+/* ================================
+      HUD do JOGO
+================================ */
+#hud {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 18px;
+}
+
+.bar {
+    width: 200px;
+    height: 20px;
+    background: #333;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.fill {
+    height: 100%;
+    border-radius: 5px;
+}
+
+.hp {
+    background: red;
+}
+
+.mp {
+    background: blue;
+}
+
+#xp-box {
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+/* ================================
+      CANVAS DO JOGO
+================================ */
+#game {
+    display: block;
+    margin: 0 auto;
+    background: #000;
+    border: 3px solid #444;
+}
+
+/* ================================
+      JANELAS / PAINÉIS
+================================ */
+.panel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.panel h2 {
+    font-size: 30px;
+}
+
+.close-btn {
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 18px;
+    background: #555;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background: #777;
+}
+
+/* ================================
+      INVENTÁRIO
+================================ */
+#inventory-grid {
+    width: 100%;
+    height: 250px;
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(5, 80px);
+    grid-gap: 10px;
+}
+
+#inventory-grid div {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #555;
+    background: #111;
+}
+
+/* ================================
+      DIÁLOGO
+================================ */
+.dialog {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    background: rgba(0,0,0,0.7);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+/* ================================
+      LOJA
+================================ */
+#shop-items {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 12px;
+}
+
+/* ================================
+      BOTÕES DE UI
+================================ */
+#ui-buttons {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+.ui-btn {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 15px;
+    font-size: 24px;
+    border: none;
+    background: #333;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.ui-btn:hover {
+    background: #555;
+}
+
+/* ================================
+      CUTSCENE
+================================ */
+.cutscene {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    padding: 30px;
+    font-size: 26px;
+    text-align: center;
+}
